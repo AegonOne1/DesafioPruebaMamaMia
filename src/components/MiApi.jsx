@@ -10,7 +10,7 @@ const MiApi = () => {
         const adaptedPizzas = []
         res.forEach((pizza => {
             adaptedPizzas.push({...pizza, count: 0})
-        }));
+        }))
         setDataPizzas(adaptedPizzas)
         console.log(adaptedPizzas)
     }
