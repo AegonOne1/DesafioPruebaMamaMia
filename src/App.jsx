@@ -4,6 +4,7 @@ import MiApi from './components/MiApi'
 import NotFound from './views/NotFound'
 import Cart from './views/Carrito'
 import Pizza from './views/Pizza'
+import Home from './views/Home'
 import './App.css'
 
 function App() {

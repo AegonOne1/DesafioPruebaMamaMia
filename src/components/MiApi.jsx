@@ -5,13 +5,14 @@ const MiApi = () => {
 
     const getPizza = async () => {
         const data = await fetch('/pizzas.json')
-        console.log(data)
+        // console.log(data)
         const res = await data.json()
         const adaptedPizzas = []
         res.forEach((pizza => {
             adaptedPizzas.push({...pizza, count: 0})
         }));
         setDataPizzas(adaptedPizzas)
+        console.log(adaptedPizzas)
     }
     
     useEffect(() =>{
