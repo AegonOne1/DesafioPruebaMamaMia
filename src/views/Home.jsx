@@ -1,8 +1,11 @@
 
 const Home = () => {
     return(
-        <h1>Hola</h1>
-    )
+        <div>
+            <h1>Pizzeria Mamma Mia!</h1>
+            <p>Tenemos las mejores pizzas que podras encontrar</p>
+        </div>
+    )   
 }
 
 

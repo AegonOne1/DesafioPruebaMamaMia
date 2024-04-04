@@ -5,6 +5,7 @@ import NotFound from './views/NotFound'
 import Cart from './views/Carrito'
 import Pizza from './views/Pizza'
 import Home from './views/Home'
+import NavBar from './components/NavBar'
 import './App.css'
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
 
   return (
     <>
+      <NavBar/>
       <Routes>
         <Route path='/' element={
           <Home>
