@@ -1,14 +1,29 @@
+import React from "react"
 import PizzaCard from "../components/PizzaCard"
 import { useParams } from "react-router-dom"
+import MiApi from "../components/MiApi"
 
-const Pizza = (props) => {
-    let {selectedId} = useParams()
+const Pizza = () => {
+    const { nameId } = useParams()
+    const pizzas = MiApi()
 
+    const selectedPizza = pizzas.find((pizza) => pizza.name === nameId);
 
-    return(
-        <h1>Hola</h1>
-    )
-}
+    return (
+        <div>
+            {selectedPizza && (
+                <PizzaCard
+                    desc={selectedPizza.desc}
+                    img={selectedPizza.img}
+                    name={selectedPizza.name}
+                    price={selectedPizza.price}
+                    ingredients={selectedPizza.ingredients}
+                    showButton={false}
+                />
+            )}
+        </div>
+    );
+};
 
+export default Pizza;
 
-export default Pizza

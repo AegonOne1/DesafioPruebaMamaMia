@@ -3,22 +3,24 @@ import { useState, useEffect } from "react"
 const MiApi = () => {
     const [dataPizzas, setDataPizzas] = useState([])
 
-    const getPizza = async () => {
-        const data = await fetch('/pizzas.json')
-        // console.log(data)
-        const res = await data.json()
-        const adaptedPizzas = []
-        res.forEach((pizza => {
-            adaptedPizzas.push({...pizza, count: 0})
-        }))
-        setDataPizzas(adaptedPizzas)
-        console.log(adaptedPizzas)
-    }
-    
-    useEffect(() =>{
-        getPizza()
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await fetch('/pizzas.json')
+                if (!response.ok) {
+                    throw new Error('Error de conexion!')
+                }
+                const data = await response.json()
+                const adaptedPizzas = data.map(pizza => ({ ...pizza, count: 0 }))
+                setDataPizzas(adaptedPizzas)
+            } catch (error) {
+                console.error('Error de fetching data:', error)
+            }
+        };
+
+        fetchData()
     }, [])
-    
+
     return dataPizzas
 }
 
