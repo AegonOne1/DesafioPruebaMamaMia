@@ -1,9 +1,12 @@
 
-const Home = () => {
+const Home = (props) => {
     return(
         <div>
-            <h1>Pizzeria Mamma Mia!</h1>
-            <p>Tenemos las mejores pizzas que podras encontrar</p>
+            <header>
+                <h1>Pizzeria Mamma Mia!</h1>
+                <p>Tenemos las mejores pizzas que podras encontrar</p>
+            </header>
+        {props.children}
         </div>
     )   
 }
