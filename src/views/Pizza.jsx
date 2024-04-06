@@ -1,4 +1,3 @@
-import React from "react"
 import PizzaCard from "../components/PizzaCard"
 import { useParams } from "react-router-dom"
 import MiApi from "../components/MiApi"
@@ -7,7 +6,7 @@ const Pizza = () => {
     const { nameId } = useParams()
     const pizzas = MiApi()
 
-    const selectedPizza = pizzas.find((pizza) => pizza.name === nameId);
+    const selectedPizza = pizzas.find((pizza) => pizza.name === nameId)
 
     return (
         <div>
@@ -22,8 +21,8 @@ const Pizza = () => {
                 />
             )}
         </div>
-    );
-};
+    )
+}
 
 export default Pizza;
 
