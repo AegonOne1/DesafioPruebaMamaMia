@@ -1,0 +1,74 @@
+.PizzaPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+
+    .LayoutCard{
+        display: flex;
+        flex-direction: row;
+        border: none;
+        margin-top: 1rem;
+        border-radius: 0.7rem;
+        margin-inline: 10rem;
+    
+        img{
+            height: 500px;
+            width: 500px;
+            border-radius: 0.7rem;
+        }
+        
+        .desc{
+            display: flex;
+            flex-direction: column;
+        }
+
+        h2{
+            padding-left: 1rem;
+            font-size: 1.5rem;
+            margin: 0;
+            padding-bottom: 1.5rem;
+        }
+    
+        p{
+            padding: 1rem;
+            font-size: large;
+        }
+        h1{
+            display: flex;
+            justify-content: center;
+            font-weight: 600;
+        }
+    
+        li{
+            list-style-type: none;
+        }
+    
+        .list{
+            margin-left: 5px;
+            font-size: 1.1rem;
+            margin-bottom: 5rem;
+            
+            p{
+                font-weight: 700;
+            }
+        }
+        
+        .orden{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        
+        .buttonAdd{
+            padding: 10px;
+            margin-right: 5px;
+            background-color: red;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 1rem;
+            font-weight: 700;
+        }
+    }
+}

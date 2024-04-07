@@ -91,34 +91,34 @@ body{
             font-weight: 700;
         }
     }
-}
 
-.buttons{
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 5px;
-
-    a{
-        text-decoration: none;
+    .buttons{
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 5px;
+    
+        a{
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+        }
+    }
+    
+    .buttonMore{
+        padding: 10px;
+        background-color: aqua;
+        border: none;
+        border-radius: 5px;
+        font-weight: 700;
+    }
+    
+    .buttonAdd{
+        padding: 10px;
+        background-color: red;
+        border: none;
+        border-radius: 5px;
         color: white;
         font-size: 1rem;
+        font-weight: 700;
     }
-}
-
-.buttonMore{
-    padding: 10px;
-    background-color: aqua;
-    border: none;
-    border-radius: 5px;
-    font-weight: 700;
-}
-
-.buttonAdd{
-    padding: 10px;
-    background-color: red;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-size: 1rem;
-    font-weight: 700;
 }
