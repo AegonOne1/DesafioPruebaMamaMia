@@ -5,6 +5,11 @@ export const AppContext = createContext()
 
 const AppProvider = ({ children }) => {
   const [data, setData] = useState([])
+  const [carrito, setCarrito] =useState([])
+
+  const addToCart = (pizza) => {
+    setCarrito([...carrito,pizza])
+  }
 
   
   const updateData = newData => {
@@ -12,7 +17,7 @@ const AppProvider = ({ children }) => {
   }
 
   return (
-    <AppContext.Provider value={{ data, updateData }}>
+    <AppContext.Provider value={{ data, updateData, carrito, addToCart }}>
       {children}
     </AppContext.Provider>
   )
